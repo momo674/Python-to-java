@@ -25,6 +25,49 @@ public class lec4 {
        hour_scan.close();
        wage_scan.close();
     }
+    public static void q2(){
+        Scanner age_collector = new Scanner(System.in);
+        System.out.print("What is your age? ");
+        int age = age_collector.nextInt();
 
+        if (age < 18){
+            System.out.println("Sorry, you cannot vote due to being under 18.");
         }
+        else{
+            Scanner city_collector = new Scanner(System.in);
+            System.out.print("Do you live in Ottawa? ");
+            String city = city_collector.next();
+            if(!city.matches("Yes|yes|y|y")){
+                System.out.println("Sorry, you cannot vote due to not living in Ottawa.");
+            }
+            else
+            {
+                Scanner province_collector = new Scanner(System.in);
+                System.out.print("Do you live in Ontario?");
+                String province = province_collector.next();
+                if (!province.matches("Yes|yes|y|Y"))
+                {
+                    System.out.println("Sorry, you cannot vote due to not living in Ontario.");
+                }
+                else
+                {
+                    Scanner background_collector = new Scanner(System.in);
+                    System.out.print("Do you have a criminal record? (True or False) ");
+                    boolean background = background_collector.nextBoolean();
+                    if (background == false){
+                        System.out.println("Sorry you cannot vote.");
+                    }
+                    else{
+                        System.out.print("Congrats you can vote!");
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+        
+        
+
+}
     
