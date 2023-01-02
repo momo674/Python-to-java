@@ -11,6 +11,19 @@ public class Assignment_1 {
          }
          return counter;
     }
+    public static String encrypt(String input)
+    {
+        int input_length = input.length() ;
+        String final_result = "";
+        for (int i = 0; i < input_length/2 ; i++)
+        {
+            final_result = final_result + Character.toString(input.charAt(input_length - i - 1)) + Character.toString(input.charAt(i));
+        }
+        if (input_length%2 != 0){
+            final_result = final_result + input.charAt((input_length-1)/2);
+        }
+        return final_result;
+    }
     public static Boolean month_apart(int month1, int day1, int month2, int day2)
     {
         int[] months = {1,2,3,4,5,6,7,8,9,10,11,12};
