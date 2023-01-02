@@ -1,4 +1,16 @@
 public class Assignment_1 {
+    public static int count_even_digits(int a, int b){
+        int counter = 0;
+        String c = Integer.toString(a);
+         for (int i = 0; i < b; i++){
+             char character = c.charAt(i);
+             int numbercheck = character;
+             if (numbercheck % 2 == 0){
+                counter++;
+             }
+         }
+         return counter;
+    }
     public static Boolean month_apart(int month1, int day1, int month2, int day2)
     {
         int[] months = {1,2,3,4,5,6,7,8,9,10,11,12};
